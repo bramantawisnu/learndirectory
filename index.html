@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<thead>
+  <meta charset="utf-8">
+
+  <!-- Tab Title / Judul Halaman  -->
+  <title>Learn Directory</title>
+
+
+
+  <!-- flaticon untuk keperluaan title images -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+
+  <!-- ===================================== START MILIGRAM =============================================== -->
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+  <!-- Milligram CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+  <!-- You should properly set the path from the main file. -->
+
+  <!-- ===================================== END MILIGRAM =============================================== -->
+
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .leftright {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .searchbox {
+      max-width: 30%;
+      margin-left: 5%;
+      margin-right: 30%;
+      font-style: italic;
+    }
+
+    h1 {
+      margin-top: 20px;
+      margin-left: 5%;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .dark-mode-button {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    #myInput {
+      background-image: url('/css/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+
+    #myTable th,
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    #myTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.header,
+    #myTable tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</thead>
+
+<body>
+
+  <h1>Learn Directory by Bram</h1>
+
+  <input class="searchbox" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ex:HTML, CSS, JavaScript, PHP, Python......." title="Type in a name">
+
+  <button class="dark-mode-button" onclick="myFunction()">Dark on/off</button>
+
+
+
+  <div class="leftright">
+    <tbody>
+      <table id="myTable">
+        <tr class="header">
+          <th style="width:40%;">Title</th>
+          <th style="width:20%;">Sub.Subject</th>
+          <th style="width:10%;">Subject</th>
+          <th style="width:10%;">Year</th>
+          <th style="width:10%;">Year</th>
+        </tr>
+        <tr>
+          <td>Array PHP</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2021</td>
+          <td>Eko Kurniawan</td>
+        </tr>
+        <tr>
+          <td>Subject PHP</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2021</td>
+          <td>Eko Kurniawan</td>
+        </tr>
+        <tr>
+          <td>Subject Javascript</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2021</td>
+          <td>Eko Kurniawan</td>
+        </tr>
+        <tr>
+          <td>Mengaitkan database dengan SQL PHP</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2019</td>
+          <td>Eko Kurniawan</td>
+        </tr>
+        <tr>
+          <td>Pendahuluaan Tailwind</td>
+          <td>Indonesia</td>
+          <td>Tailwind</td>
+          <td>2021</td>
+          <td>Sandika Galih</td>
+        </tr>
+        <tr>
+          <td>Alasan Menggunakan Tailwind</td>
+          <td>Indonesia</td>
+          <td>Tailwind</td>
+          <td>2020</td>
+          <td>Sandika Galih</td>
+        </tr>
+        <tr>
+          <td>Install Menggunakan Tailwind</td>
+          <td>Indonesia</td>
+          <td>Tailwind</td>
+          <td>2021</td>
+          <td>Sandika Galih</td>
+        </tr>
+        <tr>
+          <td>Pendahuluaan PHP</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2021</td>
+          <td>Sandika Galih</td>
+        </tr>
+        <tr>
+          <td>Install PHP</td>
+          <td>Indonesia</td>
+          <td>PHP</td>
+          <td>2021</td>
+          <td>Sandika Galih</td>
+        </tr>
+      </table>
+    </tbody>
+  </div>
+
+
+  <script>
+    // ========================= start search=====================
+    function myFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (var i = 0; i < tr.length; i++) {
+        var tds = tr[i].getElementsByTagName("td");
+        var flag = false;
+        for (var j = 0; j < tds.length; j++) {
+          var td = tds[j];
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            flag = true;
+          }
+        }
+        if (flag) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+    // ========================= end search =====================
+    // ========================= start dark mode =====================
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+
+</html>
