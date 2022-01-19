@@ -1,2 +1,2 @@
 # learndirectory
- learn directory for easy and simple list video learn
+ learn directory for easy and simple learn link to quality video text information.
