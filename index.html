@@ -7,18 +7,15 @@
   <!-- Tab Title / Judul Halaman  -->
   <title>Learn Directory</title>
 
-
-
   <!-- flaticon untuk keperluaan title images -->
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-
+  <!-- <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'> -->
 
   <!-- ===================================== START MILIGRAM =============================================== -->
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"> -->
 
   <!-- CSS Reset -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
 
   <!-- Milligram CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
@@ -27,15 +24,143 @@
 
   <!-- ===================================== END MILIGRAM =============================================== -->
 
+  <!-- ===================================== START tailwindcss =============================================== -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
 
+  <!-- ===================================== END tailwindcss =============================================== -->
 
-
+  <!-- ===================================== START skeleton =============================================== -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"> -->
+  <!-- ===================================== END skeleton =============================================== -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</thead>
+
+<!-- <button class="dark-mode-button" onclick="myFunction()">Dark | on-off</button> -->
+
+<!-- ========================start body===================== -->
+<body>
+  <h1>Quarlity Learn Directory</h1>
+  <h3>by Bram</h3>
+
+  <input class="searchbox" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ex:HTML, CSS, JavaScript, PHP, Python......." title="Type in a name">
+
+
+
+  <div class="leftright">
+
+      <table class="table-auto" id="myTable" >
+        <thead>
+        <tr class="header">
+          <th>note</th>
+          <th>Subject</th>
+          <th>Sub</th>
+          <th>Title & Link</th>
+          <th>Tutor</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            Simpel dan up to date</span></td><td>
+            Google Ads</td><td>
+            Basic Seting</td><td><a href="
+            https://www.youtube.com/watch?v=RU078LOcbWw&t=372s&ab_channel=Easywebsi" target="_blank">
+            Tutorial Cara Beriklan di Google Ads/Adwords Panduan Bagi Pemula</a></td><td>
+            Easywebsi</td><td>
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            freecodecamp, kotlin, android studio, cloud storage(for firebase) cloud firestore, google play </span></td><td>
+            Android App</td><td>
+            Create & Upload</td><td><a href="
+            https://www.youtube.com/watch?v=C2DBDZKkLss" target="_blank">
+            Build and Publish an Android App - Full Course with Kotlin</a></td><td>
+            Rahul Pandey</td><td>
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            calculator, kotlin, android studio, simple, black, google play</span></td><td>
+            Android App</td><td>
+            Calculator</td><td><a href="
+            https://www.youtube.com/watch?v=2hSHgungOKI&ab_channel=CodeWithCal" target="_blank">
+            Calculator App Android Studio Kotlin Tutorial</a></td><td>
+            Code With Cal </td><td>
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            setup, deploy, login, pilih folder dll</span></td><td>
+            Firebase</td><td>
+            Setup</td><td><a href="
+            https://www.youtube.com/watch?v=-2pTYdNVL7c&t=430s&ab_channel=RizBint70" target="_blank">
+            Membuat website dengan hosting gratis di firebase dan menambahkan domainnya</a></td><td>
+            RizBint70</td><td>
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            setup, deploy, login, pilih folder dll</span></td><td>
+            Firebase</td><td>
+            Setup</td><td><a href="
+            https://www.youtube.com/results?search_query=firebase+domain+indonesia" target="_blank">
+            Hosting Web menggunakan Firebase dan Custom Domain dari NiagaHoster</a></td><td>
+            Raffi</td><td>
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td class="tooltip">note<span class="tooltiptext">
+            setup, deploy, login, pilih folder dll</span></td><td>
+            Firebase</td><td>
+            Setup</td><td><a href="
+            https://www.youtube.com/watch?v=5n2WP8RSayY&ab_channel=ProgrammerBarBar" target="_blank">
+            Deploy web ke firebase hosting</a></td><td>
+            Bar Bar</td><td>
+            2020
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+  </div>
+
   <style>
     * {
       box-sizing: border-box;
     }
+
+    body{
+      color: #cecfd1;
+      background-color: rgb(31, 31, 31);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    table {
+      border-radius: 1em;
+      border-collapse: collapse;
+
+    }
+
+    .p1:target {
+      background-color: royalblue;
+    }
+    .p2:target {
+      background-color: salmon;
+    }
+
 
     .leftright {
       margin-left: 5%;
@@ -49,22 +174,46 @@
       font-style: italic;
     }
 
-    h1 {
+    h1  {
       margin-top: 20px;
       margin-left: 5%;
+      margin-bottom: 1px;
     }
 
-    .dark-mode {
-      background-color: black;
-      color: white;
-    }
-
-    .dark-mode-button {
+    h3 {
+      margin-top: 1px;
       margin-left: 5%;
-      margin-right: 5%;
+    }
+  }
+
+    /* ============================ start note tooltip ================================ */
+    .tooltip {
+      position: relative;
     }
 
-    #myInput {
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 300px;
+      background-color: #292929;
+      color: #fff;
+      text-align: left;
+      border-radius: 5px 20px 40px 20px;
+      padding: 10px ;
+      opacity: 0.98;
+
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    /* ============================ end note tooltip ============================== */
+
+
+    /* #myInput {
       background-image: url('/css/searchicon.png');
       background-position: 10px 10px;
       background-repeat: no-repeat;
@@ -95,97 +244,8 @@
     #myTable tr.header,
     #myTable tr:hover {
       background-color: #f1f1f1;
-    }
+    } */
   </style>
-</thead>
-
-<body>
-
-  <h1>Learn Directory by Bram</h1>
-
-  <input class="searchbox" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ex:HTML, CSS, JavaScript, PHP, Python......." title="Type in a name">
-
-  <button class="dark-mode-button" onclick="myFunction()">Dark on/off</button>
-
-
-
-  <div class="leftright">
-    <tbody>
-      <table id="myTable">
-        <tr class="header">
-          <th style="width:40%;">Title</th>
-          <th style="width:20%;">Sub.Subject</th>
-          <th style="width:10%;">Subject</th>
-          <th style="width:10%;">Year</th>
-          <th style="width:10%;">Year</th>
-        </tr>
-        <tr>
-          <td>Array PHP</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2021</td>
-          <td>Eko Kurniawan</td>
-        </tr>
-        <tr>
-          <td>Subject PHP</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2021</td>
-          <td>Eko Kurniawan</td>
-        </tr>
-        <tr>
-          <td>Subject Javascript</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2021</td>
-          <td>Eko Kurniawan</td>
-        </tr>
-        <tr>
-          <td>Mengaitkan database dengan SQL PHP</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2019</td>
-          <td>Eko Kurniawan</td>
-        </tr>
-        <tr>
-          <td>Pendahuluaan Tailwind</td>
-          <td>Indonesia</td>
-          <td>Tailwind</td>
-          <td>2021</td>
-          <td>Sandika Galih</td>
-        </tr>
-        <tr>
-          <td>Alasan Menggunakan Tailwind</td>
-          <td>Indonesia</td>
-          <td>Tailwind</td>
-          <td>2020</td>
-          <td>Sandika Galih</td>
-        </tr>
-        <tr>
-          <td>Install Menggunakan Tailwind</td>
-          <td>Indonesia</td>
-          <td>Tailwind</td>
-          <td>2021</td>
-          <td>Sandika Galih</td>
-        </tr>
-        <tr>
-          <td>Pendahuluaan PHP</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2021</td>
-          <td>Sandika Galih</td>
-        </tr>
-        <tr>
-          <td>Install PHP</td>
-          <td>Indonesia</td>
-          <td>PHP</td>
-          <td>2021</td>
-          <td>Sandika Galih</td>
-        </tr>
-      </table>
-    </tbody>
-  </div>
-
 
   <script>
     // ========================= start search=====================
@@ -212,11 +272,16 @@
       }
     }
     // ========================= end search =====================
+    </script>
+
+
+    <script>
     // ========================= start dark mode =====================
-    function myFunction() {
-      var element = document.body;
-      element.classList.toggle("dark-mode");
-    }
+    // function myFunction() {
+    //   var element = document.body;
+    //   element.classList.toggle("dark-mode");
+    // }
+
   </script>
 
 </body>
